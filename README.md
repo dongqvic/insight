@@ -13,14 +13,14 @@ Syncronizing OLTP database(eg.PostgreSQL) with OLAP database(Amazon Redshift) in
 1. Dataset: Amazon Review Dataset in .json.gz, stored in S3
  - Schema: reviewID, asin(productID), reviewerName, reviewText, helpful, overallrating, reviewTime
 
-2. Set up 2 databases in PostgreSQL and Redshift, host them with EC2 on AWS.
+2. Set up 2 databases: PostgreSQL and Redshift, host them with EC2 x 2 ( 1 master, 1 worker).
 
-3. Set up 2 kafka on EC2.
+3. Host 2 kafka with EC2 x 2.
 
 4. Monitor the overall health of the system, visualize the monitoring results. 
 Including:
-- Kafka: server, producer, consumer, broker
-- EC2(Cloudwatch)
+- Kafka: server, producer, consumer, broker, zookeeper
+- EC2 server behavior(Cloudwatch) [set up alert]
 - PostgreSQL: Read&Write query throughput and performance, replication, resource utilization
 - Redshift: query/time, query/wait/time, segment/scan/pending, query/success/count, query/failed/count
 
