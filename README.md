@@ -1,7 +1,7 @@
 # oltp_olap_monitoring: Monitoring a real-time OLTP to OLAP data pipeline
 
 # Business Cases:
-Imagining an e-commerce website like Amazon, Spring, eBay storing everything in one databse, eg PostgreSQL. During BlackFriday, customers who want search gifts are sending queries to PostgreSQL database while Data scientists who wanna predict real-time shopping trends also sending queries to the database. HIGH Stress to the OLTP database!
+Imagining an e-commerce website like Amazon, Spring, eBay storing everything in one databse, eg PostgreSQL for faster transaction purposes(Read/Write). During BlackFriday, customers who want search gifts are sending queries to PostgreSQL database while Data scientists who wanna predict real-time shopping trends also sending queries to the database. HIGH Stress to the OLTP database!
 
 # Solution:
 Syncronizing OLTP database(eg.PostgreSQL) with OLAP database(Amazon Redshift) in real-time and make sure the health condition of the pipeline by setting up monitoring system.
