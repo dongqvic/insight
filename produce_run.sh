@@ -1,5 +1,5 @@
 #######################################################
-# This is the bash script to run kafka_producer.py    #
+# This is the bash script to run producer.py    #
 #######################################################
 
 
